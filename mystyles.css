@@ -1,0 +1,22 @@
+body {
+    font-family: sans-serif;
+}
+.panel {
+    stroke: black;
+    fill: white;
+}
+.link {
+    stroke: black;
+}
+.dot {
+    fill-opacity: 0.5;
+}
+.label-node {
+    fill: red;
+}
+.active {
+    stroke: black;
+}
+.label {
+    fill: blue;
+}

@@ -1,0 +1,42 @@
+<!-- EXTERNAL REFERENCES:
+https://www.d3-graph-gallery.com/index.html
+https://www.d3indepth.com/force-layout/
+https://d3-wiki.readthedocs.io/zh_CN/master/Force-Layout/
+https://github.com/WYanChao/RadViz
+https://github.com/biovisualize/radviz
+https://www3.cs.stonybrook.edu/~shecheng/Paper/processes.pdf
+https://bl.ocks.org/EfratVil/2bcc4bf35e28ae789de238926ee1ef05   -->
+
+<html>
+    <head>
+            <script type = "text/javascript" src = "https://d3js.org/d3.v3.min.js"></script>
+            <script src="codeback_dip.js"></script>
+            <link rel="stylesheet" type="text/css" href="mystyles.css"> 
+
+    </head>
+
+    <body>
+        <div class="container"></div>
+
+        
+        <div style="margin-left: 150px; margin-top: 2px;">
+            <h2>Change Opacity of the colors:</h2>
+            <span class="leftlabel">0</span>
+            <input id ="slider" type="range" min="0" max="100" value="100" style="width: 400px; margin-right: 10px;"/>
+            <span class="rightlabel">100</span>
+        </div>
+
+        
+
+     <script>
+        
+        var radviz = mainChart()
+
+       d3.csv('winequality-red.csv', function(error, x) {
+            radviz.render(x);
+        }); 
+
+     </script>  
+        
+    </body>
+</html>
